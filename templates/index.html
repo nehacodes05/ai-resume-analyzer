@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Resume Analyzer</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .container{
+            background:white;
+            padding:40px;
+            border-radius:15px;
+            width:500px;
+            box-shadow:0px 0px 15px rgba(0,0,0,0.1);
+            text-align:center;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        input{
+            width:90%;
+            padding:12px;
+            margin-top:15px;
+        }
+
+        button{
+            margin-top:20px;
+            padding:12px 25px;
+            border:none;
+            border-radius:8px;
+            background:#4f46e5;
+            color:white;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:#3730a3;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AI Resume Analyzer</h1>
+
+    <p>Upload your resume and get AI-powered feedback.</p>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <input type="file" name="resume" required>
+
+        <br>
+
+        <input
+            type="text"
+            name="target_role"
+            placeholder="Target Role (Python Intern, Data Analyst...)">
+
+        <br>
+
+        <button type="submit">
+            Analyze Resume
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
