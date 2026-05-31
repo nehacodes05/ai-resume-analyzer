@@ -63,15 +63,37 @@ def home():
 
         # PROMPT
         prompt = f"""
-        Analyse the following resume.
+        Analyse the following resume for the Target role
 
         Target Role:
         {target_role}
+     
+        Return plain text only.
+        DO NOT use:
+        **
+        ###
+        *
+        -
+        Markdown formatting
 
-        Give:
-        1. Resume Score out of 10
-        2.Missing Skills
-        3.Improvement Suggestions
+        Use this exact formatting:
+
+        1.Resume score : X/10
+
+        2.Missing Skills:
+
+        -skill 1
+        -skill 2
+        -skill 3
+
+        3.Improvement Suggestions:
+
+        -Suggestion 1
+
+        -Suggestion 2
+
+        -Suggestion 3
+
 
         Resume:
         {text}
