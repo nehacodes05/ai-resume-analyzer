@@ -110,7 +110,10 @@ def home():
             feedback = response.text
 
         except Exception as e:
-            return f"Gemini Error : {str(e)}"
+            return render_template(
+                "result.html",
+                feedback="Gemini is currently busy.Please try again later",
+            )
 
         conn = sqlite3.connect("resume.db")
 
