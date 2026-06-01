@@ -45,8 +45,8 @@ def home():
         feedback = "GOOD RESUME"
 
         # validating
-        if resume.filename == "":
-            return " please upload a file"
+        if resume is None or resume.filename == "":
+            return " Please upload a file"
 
         # save file
         filepath = f"uploads/{resume.filename}"
@@ -153,6 +153,7 @@ def history():
     return render_template("history.html", records=records)
 
 
+init_db()
+
 if __name__ == "__main__":
-    init_db()
     app.run(host="0.0.0.0", port=10000)
