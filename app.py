@@ -5,6 +5,8 @@ import sqlite3
 from dotenv import load_dotenv
 import os
 
+os.makedirs("uploads", exist_ok=True)
+
 load_dotenv()
 
 app = Flask(__name__)
