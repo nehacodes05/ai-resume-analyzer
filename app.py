@@ -101,12 +101,16 @@ def home():
         {text}
         """
         # send to gemini
-        response = client.models.generate_content(
-            model="gemini-2.5-flash", contents=prompt
-        )
+        try:
+            response = client.models.generate_content(
+                model="gemini-2.5-flash", contents=prompt
+            )
 
-        # for saving analysis
-        feedback = response.text
+            # for saving analysis
+            feedback = response.text
+
+        except Exception as e:
+            return f"Gemini Error : {str(e)}"
 
         conn = sqlite3.connect("resume.db")
 
